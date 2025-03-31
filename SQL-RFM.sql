@@ -65,6 +65,7 @@ from TblCalcRFM
 
 
 select COUNT(*) AS GroupCount,
+COUNT(*)*100/19119 AS GroupPercent,
 MAX(RFM) as MaxRFM,
 MIN(rfm) as MinRFM,
 CustomerGroup FROM PROJECT.TblRFM GROUP BY CustomerGroup order by MaxRFM desc
